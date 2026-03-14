@@ -2,13 +2,21 @@
   "name": "@basementuniverse/view-port",
   "version": "1.0.0",
   "description": "A viewport into worldspace, for rendering chunks in games.",
+  "author": "Gordon Larrigan <gordonlarrigan@gmail.com> (https://gordonlarrigan.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basementuniverse/view-port.git"
+  },
   "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch"
   },
-  "author": "gordon",
-  "license": "MIT",
   "dependencies": {
     "@basementuniverse/vec": "^2.5.0"
   },
