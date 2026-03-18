@@ -98,6 +98,7 @@ export declare class ViewPort<T extends ViewPortChunk> {
     get countChunks(): number;
     update(dt: number, screen: vec2, camera: Camera, ...args: any[]): void;
     private addChunks;
+    getVisibleChunks(camera: Camera): T[];
     draw(context: CanvasRenderingContext2D, screen: vec2, camera: Camera, ...args: any[]): void;
 }
 export {};

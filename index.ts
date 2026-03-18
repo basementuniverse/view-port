@@ -267,6 +267,25 @@ export class ViewPort<T extends ViewPortChunk> {
     }
   }
 
+  public getVisibleChunks(camera: Camera) {
+    const bounds = camera.bounds;
+    const topLeft = vec2.sub(
+      vec2.map(
+        vec2.div(vec2(bounds.left, bounds.top), this.options.gridSize),
+        Math.floor
+      ),
+      this.options.border
+    );
+    const bottomRight = vec2.add(
+      vec2.map(
+        vec2.div(vec2(bounds.right, bounds.bottom), this.options.gridSize),
+        Math.ceil
+      ),
+      this.options.border
+    );
+    return this.spatialHash.fetch(topLeft, bottomRight);
+  }
+
   public draw(
     context: CanvasRenderingContext2D,
     screen: vec2,

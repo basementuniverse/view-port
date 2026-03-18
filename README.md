@@ -38,6 +38,12 @@ function draw(context) {
 }
 ```
 
+Get the visible chunks:
+
+```js
+const visibleChunks = viewPort.getVisibleChunks(camera);
+```
+
 ## Options
 
 ```ts
