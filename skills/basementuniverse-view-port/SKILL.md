@@ -8,6 +8,12 @@ description: >
 
 Use this skill when working with `@basementuniverse/view-port`.
 
+The package publishes a UMD build. In bundlers such as webpack or Vite, use
+named imports from `@basementuniverse/view-port`. When loading the build with a
+browser `<script>` tag, use the `BasementUniverseViewPort` global namespace,
+for example `BasementUniverseViewPort.ViewPort`. The package does not
+publish a separate native ESM build.
+
 ## When to Use This Skill
 
 Invoke this skill when:

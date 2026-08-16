@@ -1,5 +1,20 @@
 # API Reference
 
+## Browser usage
+
+For direct browser usage, load `build/index.js` with a `<script>` tag and use
+the namespaced global:
+
+```html
+<script src="build/index.js"></script>
+<script>
+	const instance = new BasementUniverseViewPort.ViewPort(/* ... */);
+</script>
+```
+
+The UMD build supports CommonJS `require()` and bundlers, but native ESM
+imports require a separate ESM build that this package does not currently ship.
+
 ## ViewPort Class
 
 ```ts

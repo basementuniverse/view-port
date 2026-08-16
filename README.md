@@ -12,6 +12,15 @@ This package is more general-purpose; it provides a `ViewPort` class which calcu
 npm install @basementuniverse/view-port
 ```
 
+For direct browser usage, include the UMD build with a script tag:
+
+```html
+<script src="build/index.js"></script>
+```
+
+The build exposes its exports through the `BasementUniverseViewPort` browser
+namespace. It does not add each export directly to `window`.
+
 ## How to use
 
 See the [example](./example/example.html) for a complete example of how to use the `ViewPort` class.
@@ -20,6 +29,20 @@ Create a viewport:
 
 ```js
 const viewPort = new ViewPort(options);
+```
+
+When using the library directly from a browser script, prefix exports with
+`BasementUniverseViewPort`:
+
+```html
+<script src="build/index.js"></script>
+<script>
+  const viewPort = new BasementUniverseViewPort.ViewPort({
+    // options here...
+  });
+
+  viewPort.update(deltaTime, screenSize, camera);
+</script>
 ```
 
 Update it every frame:

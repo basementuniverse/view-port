@@ -14,11 +14,12 @@
     "build"
   ],
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "watch": "webpack --watch"
   },
   "dependencies": {
-    "@basementuniverse/vec": "^2.5.0"
+    "@basementuniverse/vec": "^2.5.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
